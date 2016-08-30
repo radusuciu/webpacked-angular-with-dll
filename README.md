@@ -13,6 +13,6 @@ Some references:
 - [Optimizing Webpack build times and improving caching with DLL bundles - Rob Knight][4]
 
 [1]: https://webpack.github.io/docs/list-of-plugins.html#dllplugin
-[2]: https://github.com/AngularClass/angular2-hmr)
-[3]: https://github.com/AngularClass/angular2-hmr-loader)
+[2]: https://github.com/AngularClass/angular2-hmr
+[3]: https://github.com/AngularClass/angular2-hmr-loader
 [4]: https://robertknight.github.io/posts/webpack-dll-plugins/
