@@ -7,7 +7,7 @@
     "build": "npm run clean && webpack --config config/webpack.dev.js --progress --profile --bail",
     "build:dll": "webpack --config config/webpack.dll.js --progress --profile --bail",
     "dev": "webpack-dev-server --config config/webpack.dev.js",
-    "dev:dll": "npm run build:dll && webpack-dev-server --config config/webpack.dev-with-dll.js",
+    "dev:dll": "webpack-dev-server --config config/webpack.dev-with-dll.js --hot --inline",
     "clean": "npm run clean:dist && npm run clean:tsc",
     "clean:dist": "rimraf dist",
     "clean:tsc": "rimraf src/**/*.js && rimraf src/**/*.map"
@@ -36,6 +36,8 @@
     "zone.js": "0.6.12"
   },
   "devDependencies": {
+    "@angularclass/hmr": "1.0.1",
+    "@angularclass/hmr-loader": "1.0.1",
     "@types/core-js": "0.9.31",
     "@types/node": "6.0.36",
     "add-asset-html-webpack-plugin": "1.0.2",

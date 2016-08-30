@@ -4,13 +4,14 @@ var AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 var helpers = require('./helpers');
 
 module.exports = {
-  entry: {
-    'app': [ './config/polyfills.ts', './src/main.ts' ]
-  },
+  entry: [
+    './config/polyfills.ts',
+    './src/main.ts'
+  ],
 
   output: {
     path: helpers.root('dist'),
-    publicPath: '/',
+    publicPath: 'http://localhost:8080/',
     filename: 'bundle.js'
   },
 
@@ -24,7 +25,7 @@ module.exports = {
     loaders: [
       {
         test: /\.ts$/,
-        loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
+        loaders: ['awesome-typescript-loader', '@angularclass/hmr-loader', 'angular2-template-loader'],
       },
       {
         test: /\.html$/,
@@ -59,11 +60,9 @@ module.exports = {
   ],
 
   devServer: {
-    contentBase: 'dist/',
     host: '0.0.0.0',
-    inline: true,
     port: 8080,
-    // profile: true,
+    profile: true,
     progress: true
   }
 };
