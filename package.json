@@ -1,7 +1,7 @@
 {
   "name": "webpacked-angular-with-dll",
-  "version": "0.0.1",
-  "description": "Sample project demonstrating usage of webpack and dllplugin to bundle an angular project.",
+  "version": "0.0.2",
+  "description": "Sample demonstrating usage of webpack and dllplugin to bundle an angular project.",
   "main": "index.js",
   "scripts": {
     "build": "npm run clean && webpack --config config/webpack.dev.js --progress --profile --bail",
