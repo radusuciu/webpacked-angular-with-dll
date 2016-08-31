@@ -50,7 +50,7 @@ module.exports = {
       manifest: require(helpers.root('dist', 'polyfills-manifest.json'))
     }),
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: 'src/index.html',
       filename: 'dist/index.html'
     }),
     new AddAssetHtmlPlugin([

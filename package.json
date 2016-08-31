@@ -1,13 +1,13 @@
 {
   "name": "webpacked-angular-with-dll",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Sample demonstrating usage of webpack and dllplugin to bundle an angular project.",
   "main": "index.js",
   "scripts": {
     "build": "npm run clean && webpack --config config/webpack.dev.js --progress --profile --bail",
     "build:dll": "webpack --config config/webpack.dll.js --progress --profile --bail",
     "dev": "webpack-dev-server --config config/webpack.dev.js",
-    "dev:dll": "webpack-dev-server --config config/webpack.dev-with-dll.js --hot --inline",
+    "dev:dll": "npm run clean && npm run build:dll && webpack-dev-server --config config/webpack.dev-with-dll.js --hot --inline",
     "clean": "npm run clean:dist && npm run clean:tsc",
     "clean:dist": "rimraf dist",
     "clean:tsc": "rimraf src/**/*.js && rimraf src/**/*.map"
