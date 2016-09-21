@@ -1,13 +1,14 @@
 {
   "name": "webpacked-angular-with-dll",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Sample demonstrating usage of webpack and dllplugin to bundle an angular project.",
   "main": "index.js",
   "scripts": {
     "build": "npm run clean && webpack --config config/webpack.dev.js --progress --profile --bail",
     "build:dll": "webpack --config config/webpack.dll.js --progress --profile --bail",
     "dev": "webpack-dev-server --config config/webpack.dev.js",
-    "dev:dll": "npm run clean && npm run build:dll && webpack-dev-server --config config/webpack.dev-with-dll.js --hot --inline",
+    "hotdll": "webpack-dev-server --config config/webpack.dev-with-dll.js --hot --inline",
+    "dev:dll": "npm run clean && npm run build:dll && npm run hotdll",
     "clean": "npm run clean:dist && npm run clean:tsc",
     "clean:dist": "rimraf dist",
     "clean:tsc": "rimraf src/**/*.js && rimraf src/**/*.map"
@@ -23,31 +24,31 @@
   },
   "homepage": "https://github.com/radusuciu/webpacked-angular-with-dll#readme",
   "dependencies": {
-    "@angular/common": "2.0.0-rc.5",
-    "@angular/compiler": "2.0.0-rc.5",
-    "@angular/core": "2.0.0-rc.5",
-    "@angular/forms": "0.3.0",
-    "@angular/http": "2.0.0-rc.5",
-    "@angular/platform-browser": "2.0.0-rc.5",
-    "@angular/platform-browser-dynamic": "2.0.0-rc.5",
-    "@angular/router": "3.0.0-rc.1",
-    "core-js": "2.4.0",
-    "rxjs": "5.0.0-beta.6",
-    "zone.js": "0.6.12"
+    "@angular/common": "2.0.0",
+    "@angular/compiler": "2.0.0",
+    "@angular/core": "2.0.0",
+    "@angular/forms": "2.0.0",
+    "@angular/http": "2.0.0",
+    "@angular/platform-browser": "2.0.0",
+    "@angular/platform-browser-dynamic": "2.0.0",
+    "@angular/router": "3.0.0",
+    "core-js": "2.4.1",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "0.6.23"
   },
   "devDependencies": {
-    "@angularclass/hmr": "1.0.1",
-    "@angularclass/hmr-loader": "1.0.1",
-    "@types/core-js": "0.9.31",
-    "@types/node": "6.0.36",
+    "@angularclass/hmr": "1.2.1",
+    "@angularclass/hmr-loader": "3.0.2",
+    "@types/core-js": "0.9.34",
+    "@types/node": "6.0.40",
     "add-asset-html-webpack-plugin": "1.0.2",
     "angular2-template-loader": "0.5.0",
-    "awesome-typescript-loader": "2.2.1",
+    "awesome-typescript-loader": "2.2.4",
     "html-webpack-plugin": "2.22.0",
     "raw-loader": "0.5.1",
     "rimraf": "2.5.4",
     "typescript": "2.0.2",
-    "webpack": "2.1.0-beta.21",
-    "webpack-dev-server": "2.1.0-beta.0"
+    "webpack": "^2.1.0-beta.22",
+    "webpack-dev-server": "2.1.0-beta.5"
   }
 }
