@@ -1,6 +1,6 @@
 {
   "name": "webpacked-angular-with-dll",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sample demonstrating usage of webpack and dllplugin to bundle an angular project.",
   "main": "index.js",
   "scripts": {
@@ -48,7 +48,7 @@
     "raw-loader": "0.5.1",
     "rimraf": "2.5.4",
     "typescript": "2.0.2",
-    "webpack": "^2.1.0-beta.22",
+    "webpack": "2.1.0-beta.22",
     "webpack-dev-server": "2.1.0-beta.5"
   }
 }

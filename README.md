@@ -2,9 +2,9 @@
 
 Basic project showing usage of [`webpack.DllPlugin`][1] with Angular 2.0.0 to minimize build times during development. Also implements HMR using great work from [angular2-hmr][2] and [angular2-hmr-loader][3].
 
-To install:
+To install, clone this repo and:
 ```
-npm install webpacked-angular-with-dll
+npm install
 npm run dev:dll
 ```
 Then, go to [http://localhost:8080/dist](http://localhost:8080/dist) to say hello.
