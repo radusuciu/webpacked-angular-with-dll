@@ -18,7 +18,7 @@ module.exports = {
   resolve: {
     // resolve module file requests by looking for explicit extensions
     // or look for matching files with .js or .ts extensions
-    extensions: ['', '.js', '.ts']
+    extensions: ['*', '.js', '.ts']
   },
 
   module: {
@@ -29,13 +29,13 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        loader: 'raw'
+        loader: 'raw-loader'
       },
       // handle component-scoped styles specified with styleUrls
       {
         test: /\.css$/,
         include: helpers.root('src'),
-        loader: 'raw'
+        loader: 'raw-loader'
       }
     ]
   },
@@ -61,8 +61,6 @@ module.exports = {
 
   devServer: {
     host: '0.0.0.0',
-    port: 8080,
-    profile: true,
-    progress: true
+    port: 8080
   }
 };
